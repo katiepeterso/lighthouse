@@ -5,14 +5,15 @@ class Person
         @first_name = first_name
         @last_name = last_name
         @gender = gender
+        @full_name = full_name
     end
 
     def full_name
-      puts "#{first_name} #{last_name}"
+      "#{first_name} #{last_name}"
     end
 
     def doctor
-      puts "Dr. #{first_name} #{last_name}"
+      puts "Dr. " + @full_name
     end
 
     def lawyer
@@ -21,4 +22,5 @@ class Person
 end
 
 katie = Person.new("Katie", "Peterson", "female")
+katie.full_name
 katie.doctor
